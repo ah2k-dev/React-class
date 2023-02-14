@@ -1,0 +1,17 @@
+Props -> properties of a component
+    sort of similar to HTML attributes
+    improves reusability
+    immutable
+    what is prop drilling?
+    How to avoid prop drilling. 
+    -contextAPi
+    -redux
+
+State -> contains data about the component
+    built in object
+    mutable
+    asynchronus
+    when updated component re renders
+    functional components -> useState hook
+    
+

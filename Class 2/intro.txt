@@ -18,3 +18,7 @@ Components, Component life cycle
 
 Difference between class components and functional components
 Development setup
+
+npx create-react-app myapp
+cd -> to move in directory
+npm start
