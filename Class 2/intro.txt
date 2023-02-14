@@ -1,0 +1,20 @@
+React Introduction
+
+View library based on javascript. 
+Performance better javascript
+Components
+class components, functional components
+
+DOM, Vitual DOM,
+
+
+
+Components, Component life cycle
+
+3 phases: 
+    initial render
+    update 
+    destroy
+
+Difference between class components and functional components
+Development setup
