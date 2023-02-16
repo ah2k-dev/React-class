@@ -1,0 +1,3 @@
+Implementing props and states.
+Create todo app using props and states
+Work with minor functionality
