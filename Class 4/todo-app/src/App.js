@@ -8,10 +8,10 @@ function App() {
   const [todos, setTodos] = useState([])
   return (
     <div className="App">
-      {console.log(todos)}
+      {console.log(todos, 'todos ->')}
       <Header />
       <AddTodo todos={todos} setTodos={setTodos}/>
-      <TodoList todos={todos}/>
+      <TodoList todos={todos} setTodos={setTodos}/>
     </div>
   );
 }

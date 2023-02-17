@@ -1,11 +1,36 @@
 import React from 'react'
 
 const TodoItem = (props) => {
+    // console.log(props, 'todo')
+    const handleDone = () => {
+        let todoFunc = props.setTodos
+        let todoId = props.todo.id
+        let allTodos = props.allTodos
+        allTodos = allTodos.map((todo)=>{
+            if(todoId === todo.id){
+                todo.isCompleted = true
+            }
+            return todo
+        })
+        // console.log(allTodos)
+        todoFunc([...allTodos])
+    }
+    const handleDelete = () => {
+     let allTodos = props.allTodos
+
+    let filtered = allTodos.filter((todo) => {
+        return todo.id !== props.todo.id
+    })    
+    // console.log(filtered, 'filtered')
+    // console.log(props.allTodos, 'allTodos')
+    let todoFunc = props.setTodos
+    todoFunc([...filtered])
+}
   return (
     <div>
         <div style={{
             width: '250px',
-            backgroundColor: 'white',
+            backgroundColor: props.todo.isCompleted == true ? "lightgreen" : "red",
             padding: '5px 10px',
             margin: '10px',
             borderRadius: '5px',
@@ -22,8 +47,11 @@ const TodoItem = (props) => {
             }}>
             <button style={{
                 marginRight: '10px',
-            }}>Done</button>
-            <button>Delete</button>
+            }}
+            onClick={handleDone}
+            disabled={props.todo.isCompleted}
+            >{props.todo.isCompleted == true ? "Completed" : "Done"}</button>
+            <button onClick={handleDelete}>Delete</button>
             </div>
         </div>
     </div>
